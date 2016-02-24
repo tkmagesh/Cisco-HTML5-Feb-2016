@@ -1,9 +1,9 @@
 h1{
 	border-top-style: solid;
-	border-top-color : red;
+	border-top-color : green;
 	border-bottom-style: solid;
-	border-bottom-color : red;
-	background-color: lightpink;
+	border-bottom-color : green;
+	background-color: lightgreen;
 }
 
 #btnAddTask{
