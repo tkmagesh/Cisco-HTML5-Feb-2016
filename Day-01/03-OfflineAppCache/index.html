@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" manifest="app.manifest">
+<head>
+	<meta charset="UTF-8">
+	<title>Task Manager</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="style-online.css">
+	<script src="taskManager.js"></script>
+	<script>
+		window.applicationCache.onupdateready = function(){
+			window.location.reload();
+		};
+	</script>
+</head>
+<body>
+	<h1>Task Manager - 3</h1>
+	<hr>
+	<label for="">Task :</label>
+	<input type="text" name="" id="txtTask">
+	<input type="button" value="Add Task" id="btnAddTask">
+	<ol id="olTaskList">
+		
+	</ol>
+</body>
+</html>

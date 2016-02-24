@@ -1,0 +1,12 @@
+h1{
+	border-top-style: solid;
+	border-top-color : red;
+	border-bottom-style: solid;
+	border-bottom-color : red;
+	background-color: lightpink;
+}
+
+#btnAddTask{
+	display : none;
+}
+
