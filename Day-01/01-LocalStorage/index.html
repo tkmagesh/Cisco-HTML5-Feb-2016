@@ -3,15 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Task Manager</title>
+	<script>
+		var txtTask = null;
+		var olTaskList = null;
+		window.addEventListener("DOMContentLoaded", init);
+
+		function init(){
+			var btnAddTask = document.getElementById("btnAddTask");
+			btnAddTask.addEventListener("click", onBtnAddTaskClick);
+
+			txtTask = document.getElementById("txtTask");
+			olTaskList = document.getElementById("olTaskList");
+		}
+		function onBtnAddTaskClick(){
+			var taskName = txtTask.value;
+			var newTaskItem = document.createElement("li");
+			newTaskItem.innerHTML = taskName;
+			olTaskList.appendChild(newTaskItem);
+		}
+	</script>
 </head>
 <body>
 	<h1>Task Manager</h1>
 	<hr>
 	<label for="">Task :</label>
 	<input type="text" name="" id="txtTask">
-	<input type="button" value="Add Task">
+	<input type="button" value="Add Task" id="btnAddTask">
 	<ol id="olTaskList">
-		<li>Learn JavaScript</li>
+		
 	</ol>
 </body>
 </html>
