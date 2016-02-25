@@ -17,15 +17,18 @@
 			worker.addEventListener("message", onWorkerMessage);
 		}
 		function onWorkerMessage(evtArg){
-			if (evtArg.data === 'done'){
+			var workerMessage = evtArg.data;
+			if (workerMessage.type === 'done'){
 				displayMessage("Work Completed");
+			} else if (workerMessage.type === 'progress'){
+				document.getElementById("workProgress").value = workerMessage.percentCompleted;
 			} else {
 				console.log('Main worker received an unknown message ', evtArg.data);
 			}
 		}
 		function onBtnDoWorkClick(){
 			displayMessage("Work Started");
-			worker.postMessage("start");
+			worker.postMessage({type : 'start'});
 			
 		}
 		function displayMessage(msg){
